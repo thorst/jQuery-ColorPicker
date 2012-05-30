@@ -53,6 +53,7 @@ I did quite a bit of research several months ago and liked eyecon's color picker
 
 
 ###hide function###
+**Changed to have apply:**
 
     if (!isChildOf(ev.data.cal.get(0), ev.target, ev.data.cal.get(0))) {
       if (ev.data.cal.data('colorpicker').onHide.apply(this, [ev.data.cal.get(0)]) != false) {
@@ -60,6 +61,8 @@ I did quite a bit of research several months ago and liked eyecon's color picker
       }
       $(document).unbind('mousedown', hide);
     }
+
+**Return the element as well**
 
     if (!isChildOf(ev.data.cal.get(0), ev.target, ev.data.cal.get(0))) {
       if (ev.data.cal.data('colorpicker').onHide.apply(this, [ev.data.cal.get(0), ev.data.cal.data('colorpicker').el]) != false) {
